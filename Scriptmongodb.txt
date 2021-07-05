@@ -1,0 +1,101 @@
+
+use dblivresenfolie;
+
+db.createCollection("Livres")
+
+db.createCollection("Auteurs")
+
+db.createCollection("Panier")
+
+db.Auteurs.insertMany([
+{   id: 1,
+	Nom: "PIERRE LOUIS",
+	Prenom: "Jimson",
+	Sexe : "M",
+	Pays : "Haiti",
+	Adresse : [
+				{Numero: 1,
+				  Rue: "Toussaint",
+				  Commune: "Delmas",
+				  Departement : "Ouest"
+				 }],
+    Email : "jimson@gmail.com",
+	Telephone: 34236876
+},
+
+{   id: 2,
+	Nom: "TOMBEAU",
+	Prenom: "Chrisnor",
+	Sexe : "M",
+	Pays : "Haiti",
+	Adresse : [
+				{Numero: 20,
+				  Rue: "Sibert",
+				  Commune: "Croix-des-bouquets",
+				  Departement : "Ouest"
+				 }],
+    Email : "tombeauc@gmail.com",
+	Telephone: 38051274
+
+}
+])
+
+db.Livres.insertMany([
+{
+			id : 1,
+			ISBN : "978-92-95055-02-5",
+			titre: "Logique Programmation C",
+			Date_pub: "20-01-2020",
+			categorie: "Informatique",
+			id_auteurs:1,
+			prix: 50,
+			stock: 10
+},
+{
+ 	id : 2,
+			ISBN : "958-93-95055-02-5",
+			titre: "Baba de l'algorithme",
+			Date_pub: "23-05-2021",
+			categorie: "Informatique",
+			id_auteurs:2,
+			prrix: 100,
+			stock: 20
+},
+
+{
+	id : 3,
+			ISBN : "978-94-95055-02-5",
+			titre: "Les jeux de l'amour",
+			Date_pub: "23-04-2021",
+			categorie: "Roman",
+			id_auteurs:1,
+			prrix: 200,
+			stock: 30
+}
+])
+
+
+{
+	"id" : 4,
+			"ISBN" : "928-94-95655-02-5",
+			"titre": "Traiter la grippe",
+			"Date_pub": "17-03-2019",
+			"categorie": "Sante",
+			"auteurs": [
+					   {
+						"id": 2,
+						"nom": "Tombeau",
+						"prenom": "Chrisnor",
+						"telephone":"38051274",
+						"email": "tombeauc@gmail.com",
+						"adresse": {
+									"numero":13,
+									"rue": "Sibert",
+									"Commune": "Croix-des-bouquets",
+									"Departement": "Ouest"
+								}
+						}
+					 ],
+			"prrix": 250,
+			"stock": 100
+}
